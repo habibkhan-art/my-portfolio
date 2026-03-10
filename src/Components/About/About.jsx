@@ -12,7 +12,7 @@ const About = () => {
 
           {/* Left Image */}
           <div className="flex justify-center">
-            <img className="w-80 h-100"
+            <img className="w-80 h-80"
               src={habib}
               alt=""
               

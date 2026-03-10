@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <span className="text-xl font-bold tracking-wide hover:text-amber-500 transition-all duration-300">Portfolio</span>
 
-    <ul className={`${menu ? "block" : "hidden"} mx-24 mt-4 font-semibold md:mt-5 bg-black py-2 rounded-xl bg-opacity-30 md:border-none text-center md:bg-transparent md:static md:mx-0 md:flex gap-6`}>
+    <ul className={`${menu ? "block" : "hidden"} mx-24 mt-4 font-semibold md:mt-5 bg-[#171d32] py-2 rounded-xl bg-opacity-30 md:border-none text-center md:bg-transparent md:static md:mx-0 md:flex gap-6`}>
 
   <li className="hover:text-amber-500 transition-all duration-300"><a href="#About">About</a></li>
   <li className="hover:text-amber-500 transition-all duration-300"><a href="#Experience">Experience</a></li>

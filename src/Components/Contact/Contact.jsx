@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,9 +15,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Yaha API ya email service call kar sakte ho
+
     console.log("Form Data:", formData);
-    alert("Thank you! Your message has been sent.");
+
+    // Toast Alert
+    toast.success("Thank you! Your message has been sent.");
+
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -69,6 +74,9 @@ const Contact = () => {
           </button>
         </form>
       </div>
+
+      {/* Toast Container */}
+      <ToastContainer position="top-right" autoClose={3000} />
     </section>
   );
 };
