@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,9 +17,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData);
-
-    // Toast alert
     toast.success("Message sent successfully!");
 
     setFormData({
@@ -29,41 +27,62 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <h1>Contact Me</h1>
+    <section className="bg-[#020617] text-white py-20 px-6 md:px-20">
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+      <div className="max-w-4xl mx-auto flex flex-col gap-10">
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <h2 className="text-4xl font-bold text-center">
+          Contact Me
+        </h2>
 
-        <textarea
-          name="message"
-          placeholder="Your message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-6 bg-[#0f172a] p-8 rounded-2xl shadow-lg"
+        >
 
-        <button type="submit">Send Message</button>
-      </form>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="bg-[#1e293b] px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="bg-[#1e293b] px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+            required
+          />
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+            className="bg-[#1e293b] px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+            required
+          />
+
+          <button
+            type="submit"
+            className="bg-amber-600 hover:bg-amber-700 transition duration-300 text-white py-3 rounded-xl font-semibold"
+          >
+            Send Message
+          </button>
+
+        </form>
+      </div>
 
       <ToastContainer position="top-right" autoClose={3000} />
-    </div>
+
+    </section>
   );
 };
 
