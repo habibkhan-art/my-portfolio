@@ -11,19 +11,19 @@ const Projects = () => {
     title: "Quiz Website",
     image: quiz,
     desc: "This is a Quiz website created in React.",
-    demoLink: "http://localhost:5174/quiz"
+    demoLink: "https://wheather-app-iota-roan.vercel.app/"
   },
   {
     title: "To Do List",
     image: todolist,
     desc: "This is a ToDo List created in React with Tailwind CSS.",
-    demoLink: "http://localhost:5174/todolist"
+    demoLink: "https://todo-list-theta-pink.vercel.app/"
   },
   {
     title: "Weather Website",
     image: wheather,
     desc: "This is a Weather website created in React.",
-    demoLink: "http://localhost:5174/weather"
+    demoLink: "https://dev-wheather.vercel.app/"
   }
 ];
   
